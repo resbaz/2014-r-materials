@@ -1,155 +1,31 @@
 ---
 layout: bootcamp
 root: .
-venue: University of Sydney
-address: Law School Seminar Room 444 (upstairs from the Law School Bar)
-country: Australia
-humandate: Oct 31-Nov 1, 2014
-humantime: 9:00 am - 5:00 pm
-startdate: 2014-10-31
-enddate: 2014-11-01
-latlng: -33.887526,151.190262
-registration: restricted
+venue: R Lesson Materials
+address: #
+country: #
+humandate: #
+humantime: #
+startdate: #
+enddate: #
+latlng: #
+registration: #
 instructor: ["Diego Barneche", "Philipp Bayer", "Dan Warren"]
 helper: ["Sarah McIntyre", "Steson Lo"]
 contact: diego.barneche@mq.edu.au
 instructorcontact: diego.barneche@mq.edu.au
 hostcontact: alex.holcombe@sydney.edu.au
 ---
-<h2>General Information</h2>
+<h2>R lesson materials</h2>
 
-<p>
-  This intensive 2-day <a href="//software-carpentry.org">Software Carpentry</a> bootcamp will introduce attendees to a range of computing skills aimed at making them more productive and efficient in their work. This will include an introduction to R. It is not designed to teach students to calculate specific statistics in R (although a few basic examples will be covered), rather it is mainly about better coding practices that one should be able to apply to different programming environments.
-  The bootcamp will also cover version control, using the shell, and reproducible research. Short tutorials will alternate with hands-on practical exercises. Participants will be encouraged both to help one another, and to apply what they have learned to their own research problems during and between sessions.
-</p>
+The R lesson materials used by ResBaz are taken from a bootcamp run at the University 
+of Sydney by Diego Barneche, Philipp Bayer, and Dan Warren in October 2013. You can
+find a link to their bootcamp <a href="https://dbarneche.github.io/2014-10-31-USyd/">here</a>.
 
-<!-- This block displays the instructors' names if they are available. -->
-{% if page.instructor %}
-<p>
-  <strong>Instructors:</strong>
-  {{page.instructor | join: ', ' %}}
-</p>
-{% endif %}
+These materials have been adapted from both 
+<a href="http://datacarpentry.org/">Data Carpentry</a> and 
+<a href="www.software-carpentry.org">Software Carpentry</a>'s 
+core R lesson materials.
 
-<!-- This block displays the helpers' names if they are available. -->
-{% if page.helper %}
-<p>
-  <strong>Helpers:</strong>
-  {{page.helper | join: ', ' %}}
-</p>
-{% endif %}
+The lesson materials can be found <a href="lessons/index.html">here</a>.
 
-<!--
-    Modify this block to reflect the target audience for your bootcamp.
-    In particular, if it is only open to people from a particular institution,
-    or if specialized prerequisite knowledge is required, please mention that.
--->
-<p>
-  <strong>Should you sign up?</strong>
-  The bootcamp is targeted at postgraduate students and other researchers in Psychology. No previous programming experience is required. However, most students are likely to have a bit of programming experience, if not in a proper language, then at least with scripting as in SPSS or HTML, which will affect the pace of the instruction. We therefore recommend that if you have no programming experience you work through the online material covered in <a href="http://nicercode.github.io/modules/#introduction-to-r-macquarie-university-2013">'Day 1' of the NiceR code 'Introduction to R'</a>.
-</p>
-
-<!--
-    This block displays the address and links to a map showing directions.
--->
-{% if page.latlng %}
-<p>
-  <strong>Where:</strong>
-  {{ page.address }}.
-  Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{ page.latlng }}">Google Maps</a>.
-</p>
-{% endif %}
-
-<!--
-    Modify the block below if there are any special requirements.
--->
-<p>
-  <strong>Requirements:</strong>
-  Participants must bring a laptop with a few specific software packages installed
-  (listed below).
-</p>
-
-<!--
-    This block automatically inserts a contact email address if one has been specified for the page.
-    If one hasn't, this block inserts the generic contact address for Software Carpentry.
--->
-<p>
-  <strong>Content contact</strong>:
-  For more information about the content, email
-  {% if page.instructorcontact %}
-    <a href='mailto:{{page.instructorcontact}}'>{{page.instructorcontact}}</a>
-  {% else %}
-    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
-  {% endif %}
-</p>
-
-<!--
-    This block automatically inserts a contact email address for the host.
--->
-<p>
-  <strong>Host contact</strong>:
-  For information about practicalities and attendance, email
-  {% if page.hostcontact %}
-    <a href='mailto:{{page.hostcontact}}'>{{page.hostcontact}}</a>
-  {% endif %}
-</p>
-
-<hr/>
-
-<!--
-    Edit this block to show the schedule for your bootcamp.
--->
-<h2>Schedule</h2>
-
-<div class="row-fluid">
-  <div class="span6">
-    <h3>Friday, 31 October</h3>
-    <table class="table table-striped">
-      <tr> <td>09:00 - 10:15</td> <td>Introduction to R + Rstudio</td> </tr>
-      <tr> <td><em>10:15 - 10:30</em></td> <td><em>Tea break</em></td> </tr>
-      <tr> <td>10:30 - 12:15</td> <td>Functions</td> </tr>
-      <tr> <td>12:15 - 12:30</td> <td>Project setup</td> </tr>
-      <tr> <td>12:30 - 13:00</td> <td>Control flow (conditional statements)</td> </tr>
-      <tr> <td><em>13:00 - 14:00</em></td> <td><em>Lunch break</em></td> </tr>
-      <tr> <td>14:00 - 15:30</td> <td>Control flow (loops)</td> </tr>
-      <tr> <td><em>15:30 - 15:45</em></td> <td><em>Tea break</em></td> </tr>
-      <tr> <td>15:45 - 16:45</td> <td>Repeating things (plyr)</td> </tr>
-      <tr> <td>16:45 - 17:00</td> <td>Wrap-up</td> </tr>
-    </table>
-  </div>
-  <div class="span6">
-    <h3>Saturday, 1 November</h3>
-    <table class="table table-striped">
-      <tr> <td>09:00 - 10:15</td> <td>Basic shell scripting</td> </tr>
-      <tr> <td><em>10:15 - 10:30</em></td> <td><em>Tea break</em></td> </tr>
-      <tr> <td>10:30 - 12:00</td> <td>Version control with git</td> </tr>
-      <tr> <td><em>12:00 - 13:00</em></td> <td><em>Lunch break</em></td> </tr>
-      <tr> <td>13:00 - 15:00</td> <td>Introduction to GitHub + exercises</td> </tr>
-      <tr> <td><em>15:00 - 15:15</em></td> <td><em>Tea break</em></td> </tr>
-      <tr> <td>15:15 - 16:45</td> <td>Reproducible research with knitr</td> </tr>
-      <tr> <td>16:45 - 17:00</td> <td>Wrap-up</td> </tr>
-    </table>
-  </div>
-</div>
-
-<hr/>
-
-<!--
-    Edit the setup instructions in _includes/setup.html to reflect your bootcamp.
-    (In particular, most bootcamps teach either Python or R, not both.)
--->
-
-<h2>Setup</h2>
-
-<p>
-  To participate in a Software Carpentry bootcamp, 
-  you will need working copies of the software described below.
-  Please make sure to install everything
-  (or at least to download the installers)
-  <em>before</em> the start of your bootcamp.
-</p>
-
-{% include setup.html %}
